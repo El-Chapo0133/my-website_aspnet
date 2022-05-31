@@ -15,8 +15,8 @@ public class IndexModel : PageModel
 
         public void OnGetMyOnClick()
         {
-                // BashExecutionner.ExecuteCommand("bash /mnt/services/web/my-website/update_webservice.sh");
-                BashExecutionner.ExecuteCommand("touch ~/temp2.txt");
+                BashExecutionner.ExecuteCommand("bash /mnt/services/web/my-website/update_webservice.sh");
+                // BashExecutionner.ExecuteCommand("touch ~/temp2.txt");
         }
 
 }
