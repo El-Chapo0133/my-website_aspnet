@@ -1,18 +1,71 @@
 html {
-  font-size: 14px;
+        font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+        html {
+                font-size: 16px;
+        }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+        position: relative;
+        min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+        margin-bottom: 60px;
+}
+
+      
+#burger-li label {
+        display:flex;
+        flex-direction:column;
+        cursor:pointer;
+}
+      
+#burger-li label span {
+        background: #fff;
+        border-radius:1px;
+        height:3px;
+        margin: 3px 0;
+        transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+      
+      
+#burger-li span:nth-of-type(1) {
+        width:50%;
+}
+      
+#burger-li span:nth-of-type(2) {
+        width:100%;
+}
+      
+      
+#burger-li span:nth-of-type(3) {
+        width:75%;
+}
+      
+      
+#burger-li input[type="checkbox"] {
+        display:none;
+}
+      
+      
+#burger-li input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+        transform-origin:bottom;
+        transform:rotatez(45deg) translate(4px,0px)
+}
+      
+      
+#burger-li input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+        transform-origin:top;
+        transform:rotatez(-45deg)
+}
+      
+      
+#burger-li input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+        transform-origin:bottom;
+        width:50%;
+        transform: translate(14px,-4px) rotatez(45deg);
 }
